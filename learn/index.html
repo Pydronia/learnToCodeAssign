@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,300,300italic,700,700italic' rel='stylesheet'
+          type='text/css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        function positioning() {
+            var navHeight = $("#navtop").height();
+            var hHeight = $("#lessonsHead").height();
+            $("#lessonsHead").css({
+                'padding-top' : (navHeight - hHeight) / 2,
+                'padding-bottom' : (navHeight - hHeight) / 2
+            });
+            $("#scrollCont").css({
+                'height' : $(window).height() - navHeight
+            });
+            $("#mainCont").css({
+                'margin-top' : navHeight,
+                'height' : $(window).height() - navHeight,
+                'width' : $(window).width() - $("#contents").width()
+            });
+        }
+
+        $(window).load(function(){
+            positioning();
+            $("#loading").css("display", "none");
+            //Intentionally leaving overflow at hidden - completely gets rid of scrolling, it feels nice
+        });
+
+        $(window).resize(function(){
+            positioning();
+        });
+
+    </script>
+</head>
+<body class="learn">
+    <div id="loading">
+        <div class="getTheImageInTheMiddle">
+            <img src="../img/loader.gif" alt="loading">  <!-- loading gif from http://preloaders.net/ -->
+        </div>
+    </div>
+    <div id="learnCover">
+        <!-- make background blue cause im too lazy to photoshop -->
+    </div>
+
+    <div id="navtop" class="learnNav">
+        <ul>                                                         <!-- remember that these are REVERSED.          -->
+            <li class="rightmost"><a href="../index.html#about">About</a></li> <!-- top li should always have class rightmost to-->
+            <li><a href="#">Learn</a></li>                           <!-- remove borders.                            -->
+            <li><a href="../">Home</a></li>
+        </ul>
+    </div>
+
+    <aside id="contents">
+        <h1 id="lessonsHead">Lessons</h1>
+        <div id="scrollCont">
+            <ul class="lessonList">
+                <li>
+                    <a href="../lessons/1.html" target="lessonFrame">Introduction to the World Wide Web and HTML</a>
+                </li>
+                <li>
+                    <a href="../lessons/2.html" target="lessonFrame">Setting up your IDE</a>
+                </li>
+                <li>
+                    <a href="../lessons/3.html" target="lessonFrame">Creating your first Webpage</a>
+                </li>
+                <li>
+                    <a href="../lessons/4.html" target="lessonFrame">Images and Directories</a>
+                </li>
+                <li>
+                    <a href="../lessons/5.html" target="lessonFrame">Tables</a>
+                </li>
+                <li>
+                    <a href="../lessons/6.html" target="lessonFrame">Validation and Organisation</a>
+                </li>
+                <li>
+                    <a href="../lessons/7.html" target="lessonFrame">Multi-page Websites</a>
+                </li>
+                <li>
+                    <a href="../lessons/8.html" target="lessonFrame">Divs and Spans</a>
+                </li>
+                <li>
+                    <a href="../lessons/9.html" target="lessonFrame">Introduction to CSS</a>
+                </li>
+                <li>
+                    <a href="../lessons/10.html" target="lessonFrame">Your first CSS styles</a>
+                </li>
+                <li>
+                    <a href="../lessons/11.html" target="lessonFrame">Common CSS styles</a>
+                </li>
+                <li>
+                    <a href="../lessons/12.html" target="lessonFrame">Classes and IDs</a>
+                </li>
+                <li>
+                    <a href="../lessons/13.html" target="lessonFrame">Putting it all together</a>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <main id="mainCont">
+        <iframe id="lessonFrame" name="lessonFrame" src="../lessons/1.html"></iframe>
+    </main>
+    <!-- TODO: Add next lesson button, highlight active lesson, maybe add cookie to tell what lesson the user is up to -->
+
+</body>
+</html>

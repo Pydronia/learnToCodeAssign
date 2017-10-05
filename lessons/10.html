@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 10</title>
+    <link rel="stylesheet" type="text/css" href="../css/lessons.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,300,300italic,700,700italic' rel='stylesheet'
+          type='text/css' />
+</head>
+<body>
+<div class="lesson">
+    <h1 class="heading">Your first CSS styles</h1>
+    <p>
+        Now, let's start styling the web page you currently have! There are 3 ways of styling a HTML document:
+        <strong>inline</strong>, <strong>internal</strong> and <strong>external</strong>. To show the differences,
+        let's make the paragraph in our website that we already have's font colour to be red. To do this, we use the
+        property <code>color</code>. This simply defines the font's color, and we can do this using a
+        <strong>hexadecimal</strong> value, an <strong>RGB</strong> value, or one of the already built in colours that
+        CSS provides for us, like <code>blue</code> or <code>pink</code> (see
+        <a href="https://en.wikipedia.org/wiki/Web_colors" target="_blank">https://en.wikipedia.org/wiki/Web_colors</a> for more). Note
+        that all CSS properties are spelt using the American spelling, so <code>colour</code> (with a "u") will not
+        work.<br/><br/>
+
+        The <strong>inline</strong> way to style elements is as follows:<br/><br/>
+
+        <code>&lt;p style="color: rgb(255, 0, 0);"&gt;Hello, World!&lt;/p&gt;</code><br/><br/>
+
+        We use the <strong>style</strong> attribute in our HTML element to directly affect just that tag without using
+        a selector. In this case, I have used the RGB style of a pure red colour. This way of styling is easy and
+        simple, though it can get messy easily and it makes it difficult to use multiple properties. For
+        <strong>internal</strong> styling, we use the <code>&lt;style&gt;</code> tag inside the
+        <code>&lt;head&gt;</code> of our HTML:
+    </p>
+    <code class="blockCentered">
+        &lt;style&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;p {<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: #FF0000;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+        &lt;/style&gt;<br/>
+    </code>
+    <p>
+        In this case, the CSS is in the same file as all our HTML. I've used the hexadecimal style of indicating a pure
+        red colour. This method makes it easier to read our CSS and add multiple styles, however both style and
+        structure is in the same document, which is not the best way to go about doing things, especially when working
+        with multiple documents, as you will have to copy and past the same style in all your different HTML documents!
+        <strong>External</strong> styling is the solution to this. All we do is <strong>link</strong> a CSS file to our
+        HTML using, coincidentally, a <code>&lt;link&gt;</code> tag. This means we can use the same CSS file with
+        multiple HTML files with ease, and further separate our style from our structure:<br/><br/>
+
+        In our HTML we have:<br/><br/>
+
+        <code>&lt;link href="path_to_css_file" rel="stylesheet" type="text/css" /&gt;</code><br/><br/>
+
+        <code>href</code> tells where the CSS file is, <code>rel</code> tells the browser how the linked file
+        <em>relates</em> to the HTML, and <code>type</code> tells the browser what <em>kind</em> of file is
+        linked.<br/><br/>
+
+        Create a CSS file (with the extension .css) somewhere, but remember to keep your project organised! Our
+        recommendation is to create the style sheet inside a folder called "css" or similar in your root directory. Add
+        the link tag like above, except with the correct <code>href</code> value, and put the following code in your
+        newly created CSS file:
+    </p>
+    <code class="blockCentered">
+        p {<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br/>
+        }
+    </code>
+    <p>
+        And reload your page! If you have successfully done this, your "Hello, World!" paragraph should be red! Well
+        done - that was your first taste into CSS styling.
+    </p>
+</div>
+</body>
+</html>

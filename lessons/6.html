@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 6</title>
+    <link rel="stylesheet" type="text/css" href="../css/lessons.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,300,300italic,700,700italic' rel='stylesheet'
+          type='text/css' />
+</head>
+<body>
+<div class="lesson">
+    <h1 class="heading">Validation</h1>
+    <p>
+        Websites all have to follow rules to make sure they work properly and look as they should on websites -
+        otherwise you can get weird glitches and inconsistencies between different browsers. This is where
+        <strong>validation</strong> comes into play. There are many different types and versions of HTMl, however in
+        these examples, we will be talking about XHTML 1.0 Strict validation.<br/><br/>
+
+        So far most of the code you have already seen is based on HTML 5, the newest version of HTML. XHTML is a
+        version of HTML that has very strict rules about syntax. This is what you must have in every HTML file you want
+        to comply with XHTML:
+    </p>
+    <code class="blockCentered">
+        &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;<br />
+        &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;<br />
+        &lt;head&gt;	<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Conforming XHTML 1.0 Strict Template&lt;/title&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8" /&gt;	<br />
+        &lt;/head&gt;<br />
+        &lt;body&gt;<br />
+        <br />
+        &lt;/body&gt;<br />
+        &lt;/html&gt;
+    </code>
+    <p>
+        Note that the <code>&lt;!DOCTYPE&gt;</code> tag is very different, as well as the <code>&lt;html&gt;</code>
+        tag. There is also a new tag, the <code>&lt;meta&gt;</code> tag - don't worry to much about this, but all it
+        does is give extra information to the browser about the web page. Try now changing your current webpage to
+        conform to XHTML (Hint: Change the DOCTYPE, html, and add the meta tags to match the code above), and validate
+        your webpage at <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a>, the official HTML validator.
+        Bookmark this page - you will find it very useful in the future!<br/><br/>
+
+        You'll find that if you try to validate your website, you'll come up with a few errors. Try and fix these - a
+        big problem for most new developers is remembering to put a <code>/</code> at the end of <em>self-closing</em>
+        tags, like the <code>&lt;img&gt;</code> tag. Another thing to note about the <code>&lt;img&gt;</code> tag is
+        that you will need a <code>alt</code> attribute as well, to validate to XHTML. This stands for "alternative",
+        and it is simply the text to display if your image <code>src</code> does not point to a valid image, resulting
+        in a broken image. Your <code>&lt;img&gt;</code> tag should now look like:<br/><br/>
+
+        <code>&lt;img src="images/meme.png" alt="Cannot find the meme :(" /&gt;</code><br/><br/>
+
+        Revalidate, and your web page should now comply completely to XHTML 1.0 Strict! If not, try to fix whatever other
+        errors the validator shows. (The table may not validate properly, but don't worry about that for now as it
+        requires CSS to fix.) Validation is very important to every web developer - it makes sure your code will
+        work with new browsers far into the future - even if it looks OK now. Start trying to make all of your websites
+        validate - even if the code we show <em>doesn't</em> validate properly. Doing this is great practice, and makes
+        sure <strong>100%</strong> that your web page will look and work like you want it too.
+    </p>
+    <h1 class="heading">Organisation</h1>
+    <p>
+        Organisation is important for any big web based project - even this website uses organisation! If you have all
+        of your websites, images, stylesheets, and other content all in one folder or even worse, the root directory,
+        it makes it very hard to keep track of all of your files. It's great practice to spit up your images, CSS
+        (which we will learn about later) and HTML into different folders depending on what they're for. This is most
+        useful when working with <strong>multiple pages</strong>, which we will learn about in the next lesson!
+    </p>
+</div>
+</body>
+</html>

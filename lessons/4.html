@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 4</title>
+    <link rel="stylesheet" type="text/css" href="../css/lessons.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,300,300italic,700,700italic' rel='stylesheet'
+          type='text/css' />
+</head>
+<body>
+    <div class="lesson">
+        <h1 class="heading">Images and Directories</h1>
+        <p>
+            At the moment, our website looks a little bland... why don't we add a image to spice things up? To do this,
+            we add a <code>&lt;img&gt;</code> tag to our HTML - however, that's not all we need. We can't just expect
+            the browser to know exactly <em>what</em> image we're talking about. We need to add an
+            <strong>attribute</strong> to our <code>&lt;img&gt;</code> tag. There are lots of different attributes that
+            we can use for different tags, but at the moment we are only going to talk about the <code>src</code>
+            attribute for the <code>&lt;img&gt;</code> tag. The <code>src</code> attribute tells the
+            <code>&lt;img&gt;</code> tag what image to actually display. We write it like this:<br/><br/>
+
+            <code>&lt;img src="path_to_image" &gt;</code><br/><br/>
+
+            Essentially, attributes simply give elements more information to use. Before we go any further, it would be
+            a good time to talk about <strong>directories</strong>.<br/><br/>
+
+            Directories tell the browser, or computer, where it can find a specific file. For example, if you were
+            looking for your documents folder on Windows, it's likely to be in the directory
+            <code>C:\Users\username\Documents\</code>. On UNIX based systems (Mac, Linux, etc) it's likely to be in the
+            directory <code>/Users/username/Documents/</code>, which can also be written as <code>~/Documents/</code>
+            (the <code>~</code> symbol means your user folder in UNIX environments). As you can see, there are some
+            differences between the two. The most obvious is that Windows uses backslashes (<code>\</code>) and UNIX
+            uses forward slashes (<code>/</code>). Another difference is that Windows denotes what disk drive the
+            computer should look on with the letter and the colon at the beginning of the path (<code>C:\</code>).
+            The CGSComputing web server runs on a Linux based system, so it uses the UNIX type directory. This is what
+            you will use to point to images and other resources in your HTML.<br/><br/>
+
+            Let's say, in your root directory (usually the folder <code>/</code>)  you have a folder called "images".
+            Inside that folder you have a picture, say for example, <code>meme.png</code>. We want to get that meme so
+            it displays on our website. To do this, in our HTML file which will also be in the root directory, we'll
+            put a <code>&lt;img&gt;</code> tag with a source attribute that <strong>points</strong> to the image. If we
+            use a directory source that doesn't have a <code>/</code> in front of it, it's called a
+            <strong>relative</strong> directory. This is because it points to a folder <em>from</em> the directory the
+            HTML file is currently in - e.g. in our case, we would write <code>&lt;img src="images/meme.png" &gt;</code>
+            or if the HTML file was in another folder called HTML, we would write
+            <code>&lt;img src="../images/meme.png" &gt;</code>. The <code>../</code> means that you go
+            <strong>back</strong> in a directory, like pressing the back button in your file browser. If, however, the
+            src attribute <strong>does</strong> have a <code>/</code> in front of it, it's called an
+            <strong>absolute</strong> directory. This means instead of pointing to a directory from the HTML file, it
+            points to it from the root directory.<br/><br/>
+
+            Now it's your turn - right click in your directory tree in ShiftEdit, create a new folder called
+            "pictures", and then right click on that new folder you just made and upload any image from your computer
+            that you would like to display on your website, and make a image tag in your HTML that you already have
+            from the previous lessons that will display that image - put your image between the heading and the
+            paragraph.
+
+        </p>
+    </div>
+</body>
+</html>

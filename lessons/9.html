@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 9</title>
+    <link rel="stylesheet" type="text/css" href="../css/lessons.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,300,300italic,700,700italic' rel='stylesheet'
+          type='text/css' />
+</head>
+<body>
+<div class="lesson">
+    <h1 class="heading">Introduction to CSS</h1>
+    <p>
+        <strong>Cascading Style Sheet</strong> (CSS) is the name for the coding language used to add visuals and style
+        to your HTML, with color, graphics, animations, positioning, and more. CSS was introduced in December 17, 1996
+        and was developed by Håkon Wium Lie, Bert Bos and the World Wide Web Consortium. Being a separate language, it
+        keeps style (CSS) and structure (HTML) separate, which makes it easy to make distinctions between the actual
+        meaning of a document, and how that meaning is presented to your viewers. This is also good as it assists with
+        machine readability, or how easily the browser can interpret your document. Below is an example of some CSS,
+        and its structure:
+    </p>
+    <code class="blockCentered">
+        p {<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br/>
+        }<br/><br/>
+
+        selector {<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;property: value;<br/>
+        }
+    </code>
+    <p>
+        Let's break this down. The <strong>selector</strong> is what we actually want to style - it could be an
+        element, a class, or an ID, of which the latter two we will learn about later. So, if we want to style all the
+        <code>&lt;h2&gt;</code>'s in our HTML, we would use "h2" as our selector. After the selector we must have our
+        <strong>properties</strong> and <strong>values</strong> inside curly braces ({}). A property is the specific
+        aspect about the selector that we want to change - it could be the text color, the size of the font, the type
+        of font, or much much more. After the property we have a colon (:) and the value - this is what we actually
+        want the property to be set to, like <em>which</em> text color, or <em>what</em> font size. This
+        <strong>statement</strong> always ends in a semicolon (;).<br/><br/>
+
+        Above is essentially what CSS is in a nutshell. In the next lesson we will learn how to actually apply this to
+        our HTML.
+    </p>
+</div>
+</body>
+</html>

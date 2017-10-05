@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 3</title>
+    <link rel="stylesheet" type="text/css" href="../css/lessons.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,300,300italic,700,700italic' rel='stylesheet'
+          type='text/css' />
+</head>
+<body>
+    <div class="lesson">
+        <h1 class="heading">Creating your first web page</h1>
+        <code class="blockCentered">
+            &lt;!DOCTYPE html&gt;<br />
+            &lt;html&gt;<br />
+            &lt;head&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;My first webpage&lt;/title&gt;<br />
+            &lt;/head&gt;<br />
+            &lt;body&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello! This is my first webpage!<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br />
+            &lt;/body&gt;<br />
+            &lt;/html&gt;
+        </code>
+        <p>
+            Above, you can see an example of a fully functioning web page - let's go through the features of it before
+            letting you make your own!<br/><br/>
+
+            Things inside angular brackets (&lt;&gt;) are called tags - or elements. They tell the browser how to structure
+            your content. There are many different tags that affect the structure of your content: some
+            examples follow.<br/><br/>
+
+            An example of an opening paragraph element tag would be <code>&lt;p&gt;</code>, and an example of a closing
+            tag would be <code>&lt;/p&gt;</code>. Using a <code>&lt;p&gt;</code> tag is the most common way to put text
+            into your website.<br/><br/>
+
+            Other tags that affect text include:
+        </p>
+        <ul>
+            <li>
+                <code>&lt;em&gt;</code>: Tells the browser to <em>emphasise</em> the text. Most browsers simply make it
+                italic.
+            </li>
+            <li>
+                <code>&lt;strong&gt;</code>: Tells the browser to make the text <strong>strong</strong>, usually making
+                it bold.
+            </li>
+            <li>
+                <code>&lt;h1&gt;</code>: This defines a heading - there are 6 types, <code>&lt;h1&gt;</code>,
+                <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, and so on, all the way to <code>&lt;h6&gt;</code>.
+                <code>&lt;h1&gt;</code> is the biggest heading, and <code>&lt;h6&gt;</code> the smallest.
+            </li>
+        </ul>
+        <p>
+            Now, what is that <code>&lt;!DOCTYPE html&gt;</code> tag at the top? This is a tag that doesn't need to be
+            closed (that is, have another tag with a slash in front of it) that tells the browser what <em>type</em> of
+            document the browser is looking at - in this case it's <code>html</code>, so the browser will show the
+            web page like it should, as HTML.<br/><br/>
+
+            What about those <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags?
+            Put simply, you always have to put the <code>&lt;html&gt;</code> tag around everything in your web page.
+            We always need it, as it represents the root of the HTML document. The <code>&lt;head&gt;</code> tag is
+            where you put the title of your web page plus other information about it, as well as linking CSS
+            stylesheets to it (which we will get to in later lessons)! The <code>&lt;body&gt;</code> tag is essentially
+            where you put all the content you want to see on the screen - you should not put any content outside of it!
+            <br/><br/>
+
+            Now, try making your own web site! Use the code above as reference, however make it so it has a title that
+            says "Hello, World!", a <code>&lt;h1&gt;</code> heading that says "My first website!" and a
+            <code>&lt;p&gt;</code> paragraph that also says "Hello, World!" Check your website by going to the address
+            of the new HTML document you have made, and then check your code with the solution below
+            when you have done!<br/><br/>
+
+            <strong>Hint:</strong> Right click in the directory tree to the left of ShiftEdit and create a new HTML
+            document to start, then go to <strong>cgscomputing.com/studentid/name_of_html_document.html</strong> to see
+            your website. If you name your file "index.html", your browser will automatically show that page if you go
+            to <strong>cgscomputing.com/studentid/</strong>.<br/>
+        </p>
+        <h1 class="heading">Solution</h1>
+        <code class="blockCentered">
+            &lt;!DOCTYPE html&gt;<br />
+            &lt;html&gt;<br />
+            &lt;head&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Hello, World!&lt;/title&gt;<br />
+            &lt;/head&gt;<br />
+            &lt;body&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;My first website!&lt;/h1&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Hello, World!&lt;/p&gt;<br />
+            &lt;/body&gt;<br />
+            &lt;/html&gt;
+        </code>
+        <p>
+            If you got this, or something similar to this, good job! In HTML, spaces and new lines outside of tags
+            don't matter at all - however we use <strong>indentation</strong> to make it readable for other fellow
+            coders. This involves using tabs on tags and content that are <strong>nested</strong> (inside) another tag.
+            The indentation above is a good idea of how your code should look.
+        </p>
+    </div>
+</body>
+</html>

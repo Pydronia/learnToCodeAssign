@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 5</title>
+    <link rel="stylesheet" type="text/css" href="../css/lessons.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,300,300italic,700,700italic' rel='stylesheet'
+          type='text/css' />
+</head>
+<body>
+<div class="lesson">
+    <h1 class="heading">Tables</h1>
+    <p>
+        Let's now try adding a table to your website! Some basic tags you need to know include:
+    </p>
+    <ul>
+        <li>
+            <code>&lt;table&gt;</code>: This tag essentially tells the browser that everything inside of it is part of a
+            table
+        </li>
+        <li>
+            <code>&lt;tr&gt;</code>: The amount of these in a table is the amount of rows in a table - inside each of
+            these you will have an amount of...
+        </li>
+        <li>
+            <code>&lt;td&gt;</code> tags: these are basically each of the cells that you want in your table - e.g
+            columns.
+        </li>
+        <li>
+            <code>&lt;th&gt;</code>: These tags are usually used in the first <code>&lt;tr&gt;</code> or as the first
+            cell in each <code>&lt;tr&gt;</code>, because they are table <strong>headings</strong>. By default, the
+            browser will make any content in them bold and center aligned, as opposed to the standard left aligned and
+            regular text in <code>&lt;td&gt;</code>'s
+        </li>
+    </ul>
+    <p>
+        Now take a look at a simple table down below, as well as the code for it.
+    </p>
+    <table class="blockCentered">
+        <tr>
+            <th>Heading</th>
+            <th>Heading</th>
+            <th>Heading</th>
+        </tr>
+        <tr>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+        </tr>
+        <tr>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+        </tr>
+    </table>
+    <code class="blockCentered">
+        &lt;table&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Heading&lt;/th&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Heading&lt;/th&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Heading&lt;/th&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br />
+        &lt;/table&gt;
+    </code>
+    <p>
+        Try this on your own website! When you've finished, continue on reading.<br/><br/>
+
+        There are also 5 attributes for tables that are useful to know. These are:
+    </p>
+    <ul>
+        <li>
+            <code>border</code>: This will make each cell of the table have a border - this can be very useful to make
+            sure you can see the sizes of each cell. Set it to "1" to make borders appear. Add this attribute onto your
+            main <code>&lt;table&gt;</code> tag.
+        </li>
+        <li>
+            <code>colspan</code>: This tells the browser how many columns that specific cell will span - eg the cell
+            will take up 2 columns instead of 1, if you set it to "2".
+        </li>
+        <li>
+            <code>rowspan</code>: Similar to colspan, this indicates how many rows the cell specified should span. Add
+            colspan and rowspan attributes to <code>&lt;td&gt;</code>'s or <code>&lt;th&gt;</code>'s.
+        </li>
+        <li>
+            <code>width</code> and <code>height</code>: These attributes are rather self-explanatory - respectively,
+            they will set the width or height of a block element - they won't work properly on most inline elements, as
+            they don't have a <em>size</em> like block elements do. You can specify sizes in pixels, like
+            <code>200px</code>, as a percentage of the width of the users screen like <code>80%</code>, plus a few
+            units of measurement, which are not important to know right now.
+        </li>
+    </ul>
+    <p>
+        Now try yourself - make this table in your webpage! Scroll down for the solution once you have done. Make the
+        width of your table to be <code>500px</code> and the height to be <code>150px</code>.
+    </p>
+    <table class="centerTable">
+        <tr>
+            <td colspan="2"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <h1 class="heading">Solution</h1>
+    <code class="blockCentered">
+        &lt;table border="1"&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2"&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2"&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td rowspan="2"&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br />
+        &lt;/table&gt;
+    </code>
+    <p>
+        Note that the borders around your table may not be the same as shown above. Good job for finishing this
+        exercise! One thing to note about this code that you have to get rid of any extra <code>&lt;td&gt;</code> tags
+        so that the previous <code>&lt;td&gt;</code>'s can take their place, otherwise they'll be pushed out of the
+        way, making a messy table!
+    </p>
+</div>
+</body>
+</html>

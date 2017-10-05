@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,300,300italic,700,700italic' rel='stylesheet'
+          type='text/css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/typed.min.js"></script> <!-- PLUGIN FROM http://www.mattboldt.com/demos/typed-js/ -->
+    <script>
+        $(window).load(function(){
+            //var pHeight = $(".centered").height();
+            //var vHeight = $("#introCover").height();
+            //var hHeight = (vHeight - pHeight) / 2;
+            //$(".centered").css({"padding-top":hHeight + "px","padding-bottom":hHeight + "px"});
+
+            //var navHeight = $("#navtop").height();
+            //$("#learn").css("top", vHeight-navHeight + "px");
+            $("#loading").css("display", "none");
+            $("body").css("overflow", "visible");
+
+            $(".typer").typed({
+                strings: ["The easiest way to get started with HTML ^300 and CSS."],
+                typeSpeed: 30
+            });
+
+        });
+
+        </script>
+    <title>Team6</title>
+</head>
+<body>
+    <div id="loading">
+        <div class="getTheImageInTheMiddle">
+            <img src="img/loader.gif" alt="Loading...">  <!-- loading gif from http://preloaders.net/ -->
+        </div>
+    </div>
+    <div id="navtop">
+        <ul>                                                 <!-- remember that these are REVERSED.             -->
+            <li class="rightmost"><a href="#about">About</a></li> <!-- top li should always have class rightmost to  -->
+            <li><a href="#learn">Learn</a></li>              <!-- remove borders.                               -->
+            <li><a href="#">Home</a></li>
+            <li class="logo"><a>Team6</a></li>
+        </ul>
+    </div>
+
+    <div id="intro">
+
+    </div>
+    <div id="introCover">
+        <p class="centered">
+            <span class="tag">&lt;&gt;</span><br/>
+            <span class="typer"></span><br/>
+            <span class="tag">&lt;/&gt;</span>
+        </p>
+    </div>
+
+    <div id="learn">
+        <div>                                                   <!--TODO: Add a screenshot!! float right    -->
+            <h2 class="sub">Start a free and beginner friendly course now!</h2>
+            <p>
+                Even if you're completely new to the internet, you'll be able to create your own webpage in no time.
+                Start learning from the absolute basics, like how web servers work, all the way to advanced CSS selectors!
+            </p>
+            <a class="linkButton" href="learn">Get Started!</a>
+        </div>
+    </div>
+
+    <footer id="about">
+        <p class="infoText">
+            This HTML and CSS Website Group Project completed by Jack Carey (1511) and William Harlum (16988) due on
+            Monday 23 May 2016.
+        </p>
+        <h2>Technologies Used</h2>
+        <p>
+            This website uses valid HTML5 and CSS3, as well as Javascript and jQuery. It also uses the typed.js plugin
+            from <a href="http://www.mattboldt.com/" class="noStyleLink" target="_blank">Matt Boldt</a>'s website.
+        </p>
+        <img src="img/html5css3badges.png" alt="htmlcssbadge" id="webLogo" >
+    </footer>
+</body>
+</html>

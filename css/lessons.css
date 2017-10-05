@@ -1,0 +1,61 @@
+.lesson { /*main div*/
+    text-align: left;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+h1.heading {
+    text-align: center;
+    font-weight: 300;
+}
+
+strong {
+    color: #29A5AF;
+}
+
+.blockCentered {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.centered {
+    text-align: center;
+}
+
+.caption {
+    padding-top: 0.7em;
+}
+
+table.centerTable {
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+    height: 150px;
+}
+
+table.centerTable, table.centerTable th, table.centerTable td {
+    border: 1px solid white;
+}
+
+a {
+    color: #2ccdd7;
+}
+
+.noBullet {
+    list-style-type: none;
+    padding: 0;
+}
+
+code {
+    background-color: #cdcdcd;
+    color: black;
+    font-size: larger;
+}
+
+.longList > li {
+    padding-top: 0.5em;
+}
